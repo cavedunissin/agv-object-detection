@@ -9,6 +9,10 @@ download_model:
 	@ wget -N --continue "http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_2018_01_28.tar.gz"
 	@ tar xvf ssd_inception_v2_coco_2018_01_28.tar.gz
 
+download_inference_graphs:
+	@ wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1e4hROvGBmu1iGvaQaURliemB_avkdnt2' -O inference-graphs.tar.gz
+	@ tar xvf inference-graphs.tar.gz
+
 init:
 	@ if [ ! -f train.py ]; then ln -s models/research/object_detection/legacy/train.py; fi
 	@ if [ ! -f eval.py ]; then ln -s models/research/object_detection/legacy/eval.py; fi
