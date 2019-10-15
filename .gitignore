@@ -3,6 +3,5 @@
 *.swp
 *.pyc
 *.pyo
-*.mp4
 __pycache__/
 _[a-zA-Z0-9]*
