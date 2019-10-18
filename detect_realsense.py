@@ -73,10 +73,10 @@ parser.add_argument(
 args = parser.parse_args()
 
 # Setup video source
-# VIDEO_WIDTH = 640
-# VIDEO_HEIGHT = 480
-VIDEO_WIDTH = 1280
-VIDEO_HEIGHT = 720
+VIDEO_WIDTH = 640
+VIDEO_HEIGHT = 480
+# VIDEO_WIDTH = 1280
+# VIDEO_HEIGHT = 720
 rs_pipeline = rs.pipeline()
 config = rs.config()
 config.enable_stream(
@@ -84,14 +84,14 @@ config.enable_stream(
     VIDEO_WIDTH,
     VIDEO_HEIGHT,
     rs.format.z16,
-    30
+    15
 )
 config.enable_stream(
     rs.stream.color,
     VIDEO_WIDTH,
     VIDEO_HEIGHT,
     rs.format.bgr8,
-    30
+    15
 )
 rs_pipeline.start(config)
 

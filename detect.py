@@ -69,7 +69,7 @@ args = parser.parse_args()
 if args.input_type == 'file':
     video_capture = cv2.VideoCapture(args.input)
 elif args.input_type == 'camera':
-    video_capture = cv2.VideoCapture(-1)
+    video_capture = cv2.VideoCapture(0)
 
 # Prepare labels map
 with open(args.labels) as f:
